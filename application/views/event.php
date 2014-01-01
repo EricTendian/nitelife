@@ -11,14 +11,19 @@
     <body>
         <div id="event" data-role="page">
             <div data-role="header" data-position="fixed">
-                <h1>Event Name</h1>   
+                <h1><?php echo $name; ?></h1>
                 <a href="javascript:window.history.back();" class="ui-btn ui-icon-back ui-btn-icon-left">Events</a>
             </div>
             <div data-role="content">
-                <h3>Information about the event goes here</h3>
+                <h2><?php echo $name; ?></h2>
+                <h3>By <!--<a href="/business/<?php echo $organizer['id'];?>">--><?php echo $organizer['name']; ?><!--</a>--></h3>
+                <h4><?php echo date('g:i A l, n/j/Y', strtotime($start_time)); if ($end_time) echo ' - '.date('g:i A l, n/j/Y', strtotime($end_time)); ?></h4>
+                <h4><?php echo $location; ?></h4>
+                <h4>Cost: $<?php echo $cost; ?></h4>
+                <?php echo $description; ?>
             </div>
-            <div data-role="footer" data-theme="d" data-position="fixed">
-                <a class="buy" href="" data-role="button" data-inline="false">I'm going!</a>
+            <div data-role="footer" data-theme="b" data-position="fixed">
+                <a href="#" class="ui-btn ui-shadow" style="display:block">I'm going!</a>
             </div>
         </div>
     </body>
