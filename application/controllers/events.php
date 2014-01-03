@@ -18,5 +18,8 @@ class Events extends CI_Controller {
         if ($data) $this->load->view("event", $data);
         else show_404($this->input->server('REQUEST_URI'));
     }
+    public function create() {
+        $this->load->view("createevent");
+    }
 }
 ?>

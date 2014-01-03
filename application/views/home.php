@@ -15,7 +15,8 @@
             </div>
             <div data-role="content">
                 <h2>NiteLife</h2>
-                <p><a href="#selectschool" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">View Events</a></p>
+                <a href="#selectschool" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">View Events</a>
+                <a href="/events/create/" class="ui-btn ui-shadow ui-corner-all">Create Event</a>
             </div>
             
         </div>
